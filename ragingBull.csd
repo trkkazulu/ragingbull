@@ -4,7 +4,7 @@ rslider bounds(0, 4, 100, 100), channel("bruise"), range(40, 1000, 40, 1, 0.01),
 rslider bounds(100, 4, 100, 100), channel("flash"), range(0, 1, 0, 1, 0.01), text("Flash"), trackercolour(0, 255, 0, 255), outlinecolour(0, 0, 0, 50), textcolour(0, 0, 0, 255)
 rslider bounds(200, 4, 100, 100), channel("fresh"), range(0, 1, 0, 1, 0.05), text("Fresh"), trackercolour(0, 255, 0, 255), outlinecolour(0, 0, 0, 50), textcolour(0, 0, 0, 255)
 rslider bounds(300, 4, 100, 100), channel("gain"), range(0, 1, 0, 1, 0.01), text("Gain"), trackercolour(0, 255, 0, 255), outlinecolour(0, 0, 0, 50), textcolour(0, 0, 0, 255)
-rslider bounds(250, 150, 100, 100), channel("feedback"), range(0, 1, 0, 1, 0.01), text("Feedback"), trackercolour(0, 255, 0, 255), outlinecolour(0, 0, 0, 50), textcolour(0, 0, 0, 255)
+;rslider bounds(250, 150, 100, 100), channel("feedback"), range(0, 1, 0, 1, 0.01), text("Feedback"), trackercolour(0, 255, 0, 255), outlinecolour(0, 0, 0, 50), textcolour(0, 0, 0, 255)
 
 </Cabbage>
 <CsoundSynthesizer>
@@ -38,7 +38,7 @@ ares exciter a1, 3000, 20000, 10, kfresh
 aLoFreq moogladder a1, kLoFrq, kRes 
 aflang flanger aLoFreq, adel, kfeedback
 
-a2 = (aflang+ares)*.4
+a2 = (aflang+ares)*.4 ;scale the combined levels
 
 
 outs a2*kGain, a2*kGain
