@@ -27,10 +27,10 @@ kfresh chnget "fresh"
 kfeedback = 0.66
 adel = 0.02
 
+;- Region: Input Section 
 
 ;a1 inch 1
 ;a2 inch 2
-
 
 a1 diskin2 "bassClipCR.wav", 1,0,1
 
@@ -38,7 +38,7 @@ ares exciter a1, 3000, 20000, 10, kfresh
 aLoFreq moogladder a1, kLoFrq, kRes 
 aflang flanger aLoFreq, adel, kfeedback
 
-a2 = (aflang+ares)*.4 ;scale the combined levels
+a2 = (aflang+ares)*.2 ;scale the combined levels
 
 
 outs a2*kGain, a2*kGain
